@@ -1,0 +1,31 @@
+
+public class self {
+
+    public static void main(String[] args) {
+        int n = 4;
+        int b = 2 * n - 1;
+        for (int i = 0; i < b; i++) {
+            for (int j = 0; j < b; j++) {
+                if (i == j || i + j == b - 1) {
+                    System.out.print("0 ");
+                } else {
+                    int d = Math.min(Math.min(i, j), Math.min(b - 1 - i, b - 1 - j));
+                    System.out.print((n - d) + " ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+output:
+
+0 4 4 4 4 4 0 
+4 0 3 3 3 0 4 
+4 3 0 2 0 3 4 
+4 3 2 0 2 3 4 
+4 3 0 2 0 3 4 
+4 0 3 3 3 0 4 
+0 4 4 4 4 4 0 
